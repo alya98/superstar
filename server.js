@@ -4,6 +4,6 @@ const app = new Koa();
 
 app.use(async (ctx) => {
   ctx.body = 'ALINA';
-});
+})
 
 app.listen(5000);
