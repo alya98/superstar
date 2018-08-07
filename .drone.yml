@@ -1,0 +1,10 @@
+pipeline:
+  eslint:
+    image: node:latest
+    comands:
+      - npm install
+      - npm run lint
+    when:
+      event: [pull_request]
+
+branches: [ master, "*:master" ]
