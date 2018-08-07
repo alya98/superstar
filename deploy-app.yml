@@ -25,4 +25,4 @@
         restart_policy: always
 
         published_ports:
-          - 5000:4000
+          - 5000:3000

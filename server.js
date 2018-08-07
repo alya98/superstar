@@ -6,4 +6,4 @@ app.use(async (ctx) => {
   ctx.body = 'OXXXY';
 });
 
-app.listen(4000);
+app.listen(3000);
