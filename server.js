@@ -6,4 +6,4 @@ app.use(async (ctx) => {
   ctx.body = 'ALINA';
 });
 
-app.listen(5000);
+app.listen(5000)
