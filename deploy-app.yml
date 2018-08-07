@@ -1,0 +1,28 @@
+---
+- name: Deploy application using docker
+  hosts: app
+  gather_facts: False
+
+  tasks:
+    - name: Log into DockerHub
+      docker_login:
+        username: "{{ docker_registry_username }}"
+        password: "{{ docker_registry_password }}"
+        email: "{{ docker_registry_email }}"
+
+    - name: pull docker image
+      docker_image:
+        state: present
+        force: yes
+        name: miralina44/superstar-task:latest
+
+    - name: run docker container
+      docker_container:
+        name: drone-demo-app
+        image: miralina44/superstar-task:latest
+
+        state: started
+        restart_policy: always
+
+        published_ports:
+          - 5000:4000

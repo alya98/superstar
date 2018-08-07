@@ -1,0 +1,1 @@
+app ansible_ssh_host=128.199.48.110 ansible_user=root ansible_python_interpreter=/usr/bin/python3
