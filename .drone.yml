@@ -4,7 +4,7 @@ pipeline:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     comands:
-      - npm install
+      - npm install --silent
       - npm run lint
     when:
       event: [pull_request]
