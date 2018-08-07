@@ -1,8 +1,10 @@
 pipeline:
-  eslint:
+  run-tests:
     image: node:latest
-    comands:
-      - npm install
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    commands:
+      - npm install --silient
       - npm run lint
     when:
       event: [pull_request]
