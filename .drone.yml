@@ -3,7 +3,7 @@ pipeline:
     image: node:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    comands:
+    commands:
       - npm install --silient
       - npm run lint
     when:
